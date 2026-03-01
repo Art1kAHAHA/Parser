@@ -5,7 +5,7 @@ url = "http://quotes.toscrape.com"
 headers = {"User-Agent": "Mozilla/5.0"}
 response = requests.get(url, headers=headers)
 
-soup = BeautifulSoup(response.text, "html.parser")  # lxml меняем на html.parser
+soup = BeautifulSoup(response.text, "html.parser") 
 
 quotes = soup.find_all("span", class_="text")
 authors = soup.find_all("small", class_="author")
